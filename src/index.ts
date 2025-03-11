@@ -6,7 +6,11 @@ import * as fs from "node:fs";
 import * as os from "node:os";
 import parseAsMarkdown, {VerifyResult} from "./template";
 
-
+function safeReadFile(filePath: string): string | undefined {
+  if (fs.existsSync(filePath)) {
+    return fs.readFileSync(filePath, { encoding: "utf8" });
+  }
+}
 
 async function parseVersion(root: string, ideVersion: string): Promise<VerifyResult> {
   const input = getInputs()
@@ -23,12 +27,12 @@ async function parseVersion(root: string, ideVersion: string): Promise<VerifyRes
   base = path.join(base, versions[0])
   return {
     version: ideVersion,
-    compatibilityProblems: fs.readFileSync(path.join(base, 'compatibility-problems.txt'), {encoding: 'utf8'}),
-    verificationVerdict: fs.readFileSync(path.join(base, 'verification-verdict.txt'), {encoding: 'utf8'}),
-    dependencies: input.displayDependencies ? undefined : fs.readFileSync(path.join(base, 'dependencies.txt'), {encoding: 'utf8'}),
-    experimentalApiUsages: input.displayExperimentalApiUsages ? undefined : fs.readFileSync(path.join(base, 'experimental-api-usages.txt'), {encoding: 'utf8'}),
-    telemetry: input.displayTelemetry ? undefined : fs.readFileSync(path.join(base, 'telemetry.txt'), {encoding: 'utf8'}),
-    deprecatedUsages: input.displayDeprecatedUsages ? undefined : fs.readFileSync(path.join(base, 'deprecated-usages.txt'), {encoding: 'utf8'}),
+    compatibilityProblems: safeReadFile(path.join(base, 'compatibility-problems.txt')),
+    verificationVerdict: safeReadFile(path.join(base, 'verification-verdict.txt')),
+    dependencies: input.displayDependencies ? safeReadFile(path.join(base, 'dependencies.txt')) : undefined,
+    experimentalApiUsages: input.displayExperimentalApiUsages ? safeReadFile(path.join(base, 'experimental-api-usages.txt')) : undefined,
+    telemetry: input.displayTelemetry ? safeReadFile(path.join(base, 'telemetry.txt')) : undefined,
+    deprecatedUsages: input.displayDeprecatedUsages ? safeReadFile(path.join(base, 'deprecated-usages.txt')) : undefined,
   }
 }
 

@@ -1,4 +1,6 @@
 .idea
-dist/
+dist/*
+!dist/bundle.js
+!dist/bundle.js.map
 node_modules/
 .env.local

@@ -6,7 +6,8 @@
   "main": "index.js",
   "scripts": {
     "exec": "cross-env NODE_ENV=local node dist/bundle.js",
-    "build": "cross-env NODE_ENV=development rollup -c",
+    "build:dev": "cross-env NODE_ENV=development rollup -c",
+    "build": "cross-env NODE_ENV=production rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

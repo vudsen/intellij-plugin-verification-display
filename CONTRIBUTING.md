@@ -1,0 +1,1 @@
+Debug the script by add environment: `pluginVerifierResultPath=/path/to/plugin-verifier-report.zip;NODE_OPTIONS=--enable-source-maps` to your ide.

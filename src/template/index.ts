@@ -1,7 +1,7 @@
 export type VerifyResult = {
   version: string
-  compatibilityProblems: string
-  verificationVerdict: string
+  compatibilityProblems?: string
+  verificationVerdict?: string
   dependencies?: string
   experimentalApiUsages?: string
   telemetry?: string
@@ -54,10 +54,10 @@ export default function parseAsMarkdown(result: VerifyResult[]): string {
   for (let verifyResult of result) {
     builder.push(`\n\n## ${verifyResult.version}\n\n**Summary:** ${verifyResult.verificationVerdict}`)
     builder.push('\n\n### Compatibility Problems\n\n')
-    if (verifyResult.compatibilityProblems.length === 0) {
-      builder.push('✅ No compatibility problems found.')
-    } else {
+    if (verifyResult.compatibilityProblems) {
       builder.push(...splitLines(quoteJavaClass(verifyResult.compatibilityProblems)))
+    } else {
+      builder.push('✅ No compatibility problems found.')
     }
   }
   return builder.join('')

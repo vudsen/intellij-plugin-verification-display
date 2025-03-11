@@ -1,0 +1,13 @@
+name: 'vudsen/intellij-plugin-verification-display'
+description: 'Display your plugin verification result by replying a comment.'
+branding:
+  icon: map
+  color: 'blue'
+inputs:
+  plugin-verifier-result-path:
+    description: 'The verification result zip'
+    required: true
+
+runs:
+  using: 'node20'
+  main: 'dist/bundle.js'

@@ -1,4 +1,5 @@
 import * as process from "node:process";
+import * as core from '@actions/core'
 
 type Inputs = {
   pluginVerifierResultPath: string
@@ -17,6 +18,13 @@ export default function getInputs(): Inputs {
       displayTelemetry: process.env.displayTelemetry === 'true',
       displayDeprecatedUsages: process.env.displayDeprecatedUsages === 'true',
     }
+  } else {
+    return {
+      pluginVerifierResultPath: core.getInput('plugin-verifier-result-path'),
+      displayDependencies: false,
+      displayExperimentalApiUsages: false,
+      displayTelemetry: false,
+      displayDeprecatedUsages: false,
+    }
   }
-  throw new Error('TODO')
 }
