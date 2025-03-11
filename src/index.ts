@@ -1,9 +1,7 @@
-import * as StreamZip from "node-stream-zip";
 import getInputs from "./input";
 import * as core from '@actions/core'
 import * as path from "node:path";
 import * as fs from "node:fs";
-import * as os from "node:os";
 import * as github from "@actions/github";
 import parseAsMarkdown, {VerifyResult} from "./template";
 
@@ -58,20 +56,11 @@ async function replyMarkdown(token: string, markdown: string) : Promise<void> {
 async function main() {
   const input = getInputs()
 
-  const zip = new StreamZip.async({ file: input.pluginVerifierResultPath })
-  const root = path.join(os.tmpdir(), fs.mkdtempSync('pluginVerifier', { encoding: 'utf-8' }))
-  if (process.env.NODE_ENV === 'development') {
-    console.log(`Created a temporary dir on: ${root}`)
-  }
-  await zip.extract(null, root);
-  await zip.close()
-
+  const root = input.pluginVerifierResultPath
   const markdown = parseAsMarkdown(await parseResult(root))
-
 
   if (process.env.NODE_ENV === 'development') {
     console.log(markdown)
-    fs.rmSync(root, { recursive: true })
   } else {
     await replyMarkdown(input.token, markdown)
   }
