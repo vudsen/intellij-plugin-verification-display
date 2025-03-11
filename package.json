@@ -1,0 +1,30 @@
+{
+  "name": "intellij-plugin-verification-display",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "exec": "cross-env NODE_ENV=local node dist/bundle.js",
+    "build": "cross-env NODE_ENV=development rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@types/node": "^20",
+    "cross-env": "^7.0.3",
+    "rollup": "^4.35.0",
+    "rollup-plugin-replace": "^2.2.0",
+    "tslib": "^2.8.1"
+  },
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "node-stream-zip": "^1.15.0"
+  }
+}
