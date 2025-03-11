@@ -5,7 +5,7 @@ branding:
   color: 'blue'
 inputs:
   plugin-verifier-result-path:
-    description: 'The verification result zip'
+    description: 'The verification result folder'
     required: true
   token:
     description: 'The github token'

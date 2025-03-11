@@ -9,7 +9,7 @@ export type VerifyResult = {
 }
 
 
-const CLASS_PATTERN = /[\w$]+(\.[\w$]+)+((\(.+\))? : [\w$]+(\.[\w$]+)*)?/g
+const CLASS_PATTERN = /[\w$]+(\.[\w$]+)+((\([\w$ .,]+\))? : [\w$]+(\.[\w$]+)*)?/g
 function quoteJavaClass(text: string): string[] {
   const builder: string[] = []
   let result: RegExpExecArray | null = null
