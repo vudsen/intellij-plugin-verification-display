@@ -4,6 +4,7 @@ import * as core from '@actions/core'
 import * as path from "node:path";
 import * as fs from "node:fs";
 import * as os from "node:os";
+import * as github from "@actions/github";
 import parseAsMarkdown, {VerifyResult} from "./template";
 
 function safeReadFile(filePath: string): string | undefined {
@@ -44,6 +45,16 @@ async function parseResult(unzippedRoot: string): Promise<VerifyResult[]> {
   return results
 }
 
+async function replyMarkdown(token: string, markdown: string) : Promise<void> {
+  const octokit = github.getOctokit(token)
+  await octokit.rest.issues.createComment({
+    owner: github.context.repo.owner,
+    repo: github.context.repo.repo,
+    issue_number: github.context.issue.number,
+    body: markdown,
+  })
+}
+
 async function main() {
   const input = getInputs()
 
@@ -55,9 +66,14 @@ async function main() {
   await zip.extract(null, root);
   await zip.close()
 
-  console.log(parseAsMarkdown(await parseResult(root)));
+  const markdown = parseAsMarkdown(await parseResult(root))
+
+
   if (process.env.NODE_ENV === 'development') {
+    console.log(markdown)
     fs.rmSync(root, { recursive: true })
+  } else {
+    await replyMarkdown(input.token, markdown)
   }
 }
 

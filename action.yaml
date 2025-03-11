@@ -7,6 +7,9 @@ inputs:
   plugin-verifier-result-path:
     description: 'The verification result zip'
     required: true
+  token:
+    description: 'The github token'
+    required: true
 
 runs:
   using: 'node20'

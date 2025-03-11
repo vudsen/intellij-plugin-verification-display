@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.0",
     "node-stream-zip": "^1.15.0"
   }
 }

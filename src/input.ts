@@ -7,6 +7,7 @@ type Inputs = {
   displayExperimentalApiUsages: boolean
   displayTelemetry: boolean
   displayDeprecatedUsages: boolean
+  token: string
 }
 
 export default function getInputs(): Inputs {
@@ -17,6 +18,7 @@ export default function getInputs(): Inputs {
       displayExperimentalApiUsages: process.env.displayExperimentalApiUsages === 'true',
       displayTelemetry: process.env.displayTelemetry === 'true',
       displayDeprecatedUsages: process.env.displayDeprecatedUsages === 'true',
+      token: ''
     }
   } else {
     return {
@@ -25,6 +27,7 @@ export default function getInputs(): Inputs {
       displayExperimentalApiUsages: false,
       displayTelemetry: false,
       displayDeprecatedUsages: false,
+      token: core.getInput('token'),
     }
   }
 }
