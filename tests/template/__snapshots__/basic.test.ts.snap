@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test basic usage 1`] = `
+"# Plugin Verifier Check Result
+
+## IC-232.10335.12
+
+**Summary:** 4 compatibility problems. 6 usages of experimental API
+
+
+### Compatibility Problems
+
+- 🐞 Method \`io.github.vudsen.arthasui.bridge.ui.SshConfigurationForm.getComponent.root$1$1$1.invoke(com.intellij.ui.dsl.builder.Row $this$row) : void\` contains an *invokeinterface* instruction referencing an unresolved method \`com.intellij.ui.dsl.builder.Row.segmentedButton(java.util.Collection, kotlin.jvm.functions.Function2) : com.intellij.ui.dsl.builder.SegmentedButton\`. This can lead to **NoSuchMethodError** exception at runtime.
+- 🐞 Method \`io.github.vudsen.arthasui.run.ArthasProcessHandler.startNotify$1.startNotified$1$1.invokeSuspend(java.lang.Object $result) : java.lang.Object\` contains an *invokestatic* instruction referencing an unresolved method \`com.intellij.openapi.components.ServicesKt.serviceNotFoundError(com.intellij.openapi.components.ComponentManager, java.lang.Class) : java.lang.IllegalStateException\`. This can lead to **NoSuchMethodError** exception at runtime.
+- 🐞 Method \`io.github.vudsen.arthasui.bridge.ui.SshConfigurationForm.getComponent.root$1$1$1$1.invoke(SegmentedButton.ItemPresentation $this$segmentedButton, OS it) : void\` references an unresolved class \`com.intellij.ui.dsl.builder.SegmentedButton.ItemPresentation\`. This can lead to **NoSuchClassError** exception at runtime.
+- 🐞 Method \`io.github.vudsen.arthasui.bridge.ui.SshConfigurationForm.getComponent.root$1$1$1$1.invoke(Object p1, Object p2) : Object\` references an unresolved class \`com.intellij.ui.dsl.builder.SegmentedButton.ItemPresentation\`. This can lead to **NoSuchClassError** exception at runtime.
+
+## IC-233.15619.7
+
+**Summary:** 1 compatibility problem. 10 usages of experimental API
+
+
+### Compatibility Problems
+
+- 🐞 Method \`io.github.vudsen.arthasui.run.ArthasProcessHandler.startNotify$1.startNotified$1$1.invokeSuspend(java.lang.Object $result) : java.lang.Object\` contains an *invokestatic* instruction referencing an unresolved method \`com.intellij.openapi.components.ServicesKt.serviceNotFoundError(com.intellij.openapi.components.ComponentManager, java.lang.Class) : java.lang.IllegalStateException\`. This can lead to **NoSuchMethodError** exception at runtime.
+
+## IC-241.19416.15
+
+**Summary:** Compatible. 2 usages of deprecated API. 10 usages of experimental API
+
+
+### Compatibility Problems
+
+✅ No compatibility problems found.
+
+## IC-242.24807.4
+
+**Summary:** Compatible. 2 usages of deprecated API. 10 usages of experimental API
+
+
+### Compatibility Problems
+
+✅ No compatibility problems found.
+
+## IC-243.25659.39
+
+**Summary:** Compatible. 2 usages of deprecated API. 4 usages of experimental API
+
+
+### Compatibility Problems
+
+✅ No compatibility problems found."
+`;

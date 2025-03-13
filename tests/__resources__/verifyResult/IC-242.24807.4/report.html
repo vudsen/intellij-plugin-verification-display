@@ -1,0 +1,313 @@
+<html>
+<head>
+<title>
+Verification result IC-242.24807.4
+</title>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js" type="text/javascript">
+</script>
+<script src="https://code.jquery.com/ui/1.9.2/jquery-ui.min.js" type="text/javascript">
+</script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" type="text/css"/>
+<style type="text/css">
+.shortDescription {
+    padding: 2px;
+}
+
+.updates div div:nth-child(odd) {
+    background: #eee;
+}
+
+.uMarker, .pMarker {
+    white-space: pre;
+    font-weight: bold;
+}
+
+.updateOk .uMarker {
+    background: #0f0;
+    color: #0f0;
+}
+
+.updateHasProblems .uMarker {
+    background: #f00;
+    color: #f00;
+}
+
+.warnings .uMarker {
+    background: #ffeb00;
+    color: #ffeb00;
+}
+
+.missingDeps .uMarker {
+    background: #7fd8ff;
+    color: #7fd8ff;
+}
+
+.badPlugin .uMarker {
+    background: #5f3103;
+    color: #5f3103;
+}
+
+.notFound .uMarker {
+    background: #e5c2ef;
+    color: #e5c2ef;
+}
+
+.failedToDownload .uMarker {
+    background: #ffa87a;
+    color: #ffa87a;
+}
+
+.excluded .uMarker {
+    background: #888 !important;
+}
+
+.problematicOnly .excluded, .problematicOnly .updateOk, .problematicOnly .pluginOk {
+    display: none;
+}
+
+.pluginOk .pMarker {
+    background: #0f0;
+    color: #0f0;
+}
+
+.pluginHasProblems .pMarker {
+    background: #f00;
+    color: #f00;
+}
+
+.warnings .pMarker {
+    background: #ffeb00;
+    color: #ffeb00;
+}
+
+.missingDeps .pMarker {
+    background: #7fd8ff;
+    color: #7fd8ff;
+}
+
+.badPlugin .pMarker {
+    background: #5f3103;
+    color: #5f3103;
+}
+
+.notFound .pMarker {
+    background: #e5c2ef;
+    color: #e5c2ef;
+}
+
+.failedToDownload .pMarker {
+    background: #ffa87a;
+    color: #ffa87a;
+}
+
+.shortDescription a {
+    color: #2B587A !important;
+}
+
+.longDescription {
+    display: none;
+    margin-left: 100px;
+    padding: 2px;
+}
+</style>
+</head>
+<body>
+<h2>
+IC-242.24807.4</h2>
+<div class="plugin pluginOk">
+<h3>
+<span class="pMarker">
+    </span>
+io.github.vudsen.arthas-ui</h3>
+<div >
+<div class="update updateOk">
+<h3>
+<span class="uMarker">
+    </span>
+0.0.2-alpha<small>
+io.github.vudsen.arthas-ui:0.0.2-alpha</small>
+<small>
+Compatible. 2 usages of deprecated API. 10 usages of experimental API</small>
+</h3>
+<div >
+<p>
+<div class="shortDescription">
+Deprecated API usages <a href="#" class="detailsLink">
+details</a>
+<div class="longDescription">
+<div class="shortDescription">
+Deprecated method com.intellij.ui.util.UiSizeUtilKt.setMinimumWidth(JComponent, int) invocation <a href="#" class="detailsLink">
+details</a>
+<div class="longDescription">
+(Deprecated method com.intellij.ui.util.UiSizeUtilKt.setMinimumWidth(JComponent, int) invocation, Deprecated method com.intellij.ui.util.UiSizeUtilKt.setMinimumWidth(javax.swing.JComponent $this$minimumWidth, int newValue) : void is invoked in io.github.vudsen.arthasui.core.ui.HostMachineToolWindowV2.&lt;init&gt;(Project))</div>
+</div>
+<div class="shortDescription">
+Deprecated method com.intellij.ui.util.UiSizeUtilKt.setPreferredHeight(JComponent, int) invocation <a href="#" class="detailsLink">
+details</a>
+<div class="longDescription">
+(Deprecated method com.intellij.ui.util.UiSizeUtilKt.setPreferredHeight(JComponent, int) invocation, Deprecated method com.intellij.ui.util.UiSizeUtilKt.setPreferredHeight(javax.swing.JComponent $this$preferredHeight, int newValue) : void is invoked in io.github.vudsen.arthasui.util.ui.TabbedPaneHeader.&lt;init&gt;(ActionGroup, TabHeaderListener))</div>
+</div>
+</div>
+</div>
+</p>
+<p>
+<div class="shortDescription">
+Experimental API usages <a href="#" class="detailsLink">
+details</a>
+<div class="longDescription">
+<div class="shortDescription">
+Experimental API class com.intellij.openapi.progress.CoroutinesKt reference <a href="#" class="detailsLink">
+details</a>
+<div class="longDescription">
+(Experimental API class com.intellij.openapi.progress.CoroutinesKt reference, Experimental API class com.intellij.openapi.progress.CoroutinesKt is referenced in io.github.vudsen.arthasui.core.ArthasQueryConsoleActionGroup.runSelected$2.run(ProgressIndicator) : void. This class can be changed in a future release leading to incompatibilities)
+(Experimental API class com.intellij.openapi.progress.CoroutinesKt reference, Experimental API class com.intellij.openapi.progress.CoroutinesKt is referenced in io.github.vudsen.arthasui.core.ArthasQueryConsoleActionGroup.runSelected$2.run$1.invokeSuspend(Object) : Object. This class can be changed in a future release leading to incompatibilities)</div>
+</div>
+<div class="shortDescription">
+Experimental API interface com.intellij.ui.dsl.builder.SegmentedButton reference <a href="#" class="detailsLink">
+details</a>
+<div class="longDescription">
+(Experimental API interface com.intellij.ui.dsl.builder.SegmentedButton reference, Experimental API interface com.intellij.ui.dsl.builder.SegmentedButton is referenced in io.github.vudsen.arthasui.bridge.ui.SshConfigurationForm.getComponent.root$1$1$1.invoke(Row) : void. This interface can be changed in a future release leading to incompatibilities)</div>
+</div>
+<div class="shortDescription">
+Experimental API interface com.intellij.ui.dsl.builder.SegmentedButton.ItemPresentation reference <a href="#" class="detailsLink">
+details</a>
+<div class="longDescription">
+(Experimental API interface com.intellij.ui.dsl.builder.SegmentedButton.ItemPresentation reference, Experimental API interface com.intellij.ui.dsl.builder.SegmentedButton.ItemPresentation is referenced in io.github.vudsen.arthasui.bridge.ui.SshConfigurationForm.getComponent.root$1$1$1$1.invoke(Object, Object) : Object. This interface can be changed in a future release leading to incompatibilities)
+(Experimental API interface com.intellij.ui.dsl.builder.SegmentedButton.ItemPresentation reference, Experimental API interface com.intellij.ui.dsl.builder.SegmentedButton.ItemPresentation is referenced in io.github.vudsen.arthasui.bridge.ui.SshConfigurationForm.getComponent.root$1$1$1$1.invoke(SegmentedButton.ItemPresentation, OS) : void. This interface can be changed in a future release leading to incompatibilities)</div>
+</div>
+<div class="shortDescription">
+Experimental API method com.intellij.openapi.progress.CoroutinesKt.blockingContext(Function0, Continuation) invocation <a href="#" class="detailsLink">
+details</a>
+<div class="longDescription">
+(Experimental API method com.intellij.openapi.progress.CoroutinesKt.blockingContext(Function0, Continuation) invocation, Experimental API method com.intellij.openapi.progress.CoroutinesKt.blockingContext(kotlin.jvm.functions.Function0 action, kotlin.coroutines.Continuation $completion) : java.lang.Object is invoked in io.github.vudsen.arthasui.core.ArthasQueryConsoleActionGroup.runSelected$2.run$1.invokeSuspend(Object) : Object. This method can be changed in a future release leading to incompatibilities)</div>
+</div>
+<div class="shortDescription">
+Experimental API method com.intellij.openapi.progress.CoroutinesKt.runBlockingCancellable(Function2) invocation <a href="#" class="detailsLink">
+details</a>
+<div class="longDescription">
+(Experimental API method com.intellij.openapi.progress.CoroutinesKt.runBlockingCancellable(Function2) invocation, Experimental API method com.intellij.openapi.progress.CoroutinesKt.runBlockingCancellable(kotlin.jvm.functions.Function2 action) : T is invoked in io.github.vudsen.arthasui.core.ArthasQueryConsoleActionGroup.runSelected$2.run(ProgressIndicator) : void. This method can be changed in a future release leading to incompatibilities)</div>
+</div>
+<div class="shortDescription">
+Experimental API method com.intellij.ui.dsl.builder.Row.segmentedButton(Collection, Function2) invocation <a href="#" class="detailsLink">
+details</a>
+<div class="longDescription">
+(Experimental API method com.intellij.ui.dsl.builder.Row.segmentedButton(Collection, Function2) invocation, Experimental API method com.intellij.ui.dsl.builder.Row.segmentedButton(java.util.Collection arg0, kotlin.jvm.functions.Function2 arg1) : com.intellij.ui.dsl.builder.SegmentedButton is invoked in io.github.vudsen.arthasui.bridge.ui.SshConfigurationForm.getComponent.root$1$1$1.invoke(Row) : void. This method can be changed in a future release leading to incompatibilities)</div>
+</div>
+<div class="shortDescription">
+Experimental API method com.intellij.ui.dsl.builder.SegmentedButton.ItemPresentation.setText(String) invocation <a href="#" class="detailsLink">
+details</a>
+<div class="longDescription">
+(Experimental API method com.intellij.ui.dsl.builder.SegmentedButton.ItemPresentation.setText(String) invocation, Experimental API method com.intellij.ui.dsl.builder.SegmentedButton.ItemPresentation.setText(java.lang.String arg0) : void is invoked in io.github.vudsen.arthasui.bridge.ui.SshConfigurationForm.getComponent.root$1$1$1$1.invoke(SegmentedButton.ItemPresentation, OS) : void. This method can be changed in a future release leading to incompatibilities)</div>
+</div>
+<div class="shortDescription">
+Experimental API method com.intellij.ui.dsl.builder.SegmentedButton.bind(ObservableMutableProperty) invocation <a href="#" class="detailsLink">
+details</a>
+<div class="longDescription">
+(Experimental API method com.intellij.ui.dsl.builder.SegmentedButton.bind(ObservableMutableProperty) invocation, Experimental API method com.intellij.ui.dsl.builder.SegmentedButton.bind(com.intellij.openapi.observable.properties.ObservableMutableProperty arg0) : com.intellij.ui.dsl.builder.SegmentedButton is invoked in io.github.vudsen.arthasui.bridge.ui.SshConfigurationForm.getComponent.root$1$1$1.invoke(Row) : void. This method can be changed in a future release leading to incompatibilities)</div>
+</div>
+</div>
+</div>
+</p>
+<div class="shortDescription">
+Dependencies used on verification <a href="#" class="detailsLink">
+details</a>
+<div class="longDescription">
+io.github.vudsen.arthas-ui:0.0.2-alpha<br/>
++--- com.intellij.java:242.24807.4<br/>
+|    +--- intellij.platform.vcs.impl:&lt;empty version&gt; [declaring module com.intellij.modules.vcs]<br/>
+|    |    \--- com.intellij:242.24807.4 [declaring module intellij.libraries.microba]<br/>
+|    |         +--- (failed) com.intellij.platform.experimental.backend (plugin, v2): Dependency 'com.intellij.platform.experimental.backend (plugin, v2)' is not resolved. It was searched in the following locations: com.jetbrains.pluginverifier.repository.repositories.dependency.DependencyPluginRepository@5e4459c1, Bundled plugins of IC-242.24807.4, com.jetbrains.pluginverifier.repository.repositories.dependency.DependencyPluginRepository@1cadd02f<br/>
+|    |         +--- (optional) com.intellij.copyright:242.24807.4<br/>
+|    |         |    \--- com.intellij:242.24807.4 (*) [declaring module com.intellij.modules.lang]<br/>
+|    |         +--- (optional) com.intellij.platform.images:242.24807.4<br/>
+|    |         |    \--- com.intellij:242.24807.4 (*) [declaring module com.intellij.modules.lang]<br/>
+|    |         +--- (optional) org.jetbrains.kotlin:242.24807.4<br/>
+|    |         |    +--- com.intellij.java:242.24807.4 (*)<br/>
+|    |         |    \--- com.intellij:242.24807.4 (*) [declaring module intellij.platform.collaborationTools]<br/>
+|    |         +--- (optional) intellij.java.featuresTrainer:&lt;empty version&gt; [declaring module intellij.java.featuresTrainer]<br/>
+|    |         |    \--- training:242.24807.4<br/>
+|    |         |         +--- com.intellij:242.24807.4 (*) [declaring module intellij.platform.lvcs.impl]<br/>
+|    |         |         \--- (optional) Git4Idea:242.24807.4<br/>
+|    |         |              +--- intellij.platform.vcs.impl:&lt;empty version&gt; (*) [declaring module com.intellij.modules.vcs]<br/>
+|    |         |              +--- com.intellij:242.24807.4 (*) [declaring module intellij.platform.collaborationTools]<br/>
+|    |         |              +--- (optional) com.jetbrains.performancePlugin:242.24807.4<br/>
+|    |         |              |    \--- com.intellij:242.24807.4 (*) [declaring module com.intellij.modules.lang]<br/>
+|    |         |              \--- (optional) org.jetbrains.plugins.terminal:242.24807.4<br/>
+|    |         |                   +--- com.intellij:242.24807.4 (*) [declaring module com.intellij.modules.lang]<br/>
+|    |         |                   \--- (optional) com.jetbrains.sh:242.24807.4<br/>
+|    |         |                        +--- com.intellij:242.24807.4 (*) [declaring module com.intellij.modules.lang]<br/>
+|    |         |                        +--- (optional) com.intellij.copyright:242.24807.4 (*)<br/>
+|    |         |                        +--- (optional) org.intellij.plugins.markdown:242.24807.4<br/>
+|    |         |                        |    +--- com.intellij:242.24807.4 (*) [declaring module com.intellij.modules.lang]<br/>
+|    |         |                        |    +--- (optional) com.intellij.platform.images:242.24807.4 (*)<br/>
+|    |         |                        |    +--- (optional) org.intellij.intelliLang:242.24807.4<br/>
+|    |         |                        |    |    +--- (optional) XPathView:242.22855.32<br/>
+|    |         |                        |    |    |    \--- com.intellij:242.24807.4 (*) [declaring module com.intellij.modules.xml]<br/>
+|    |         |                        |    |    +--- (optional) com.intellij.java:242.24807.4 (*) [declaring module com.intellij.modules.java]<br/>
+|    |         |                        |    |    \--- (optional) com.intellij:242.24807.4 (*) [declaring module com.intellij.modules.xml]<br/>
+|    |         |                        |    +--- (optional) org.jetbrains.plugins.yaml:242.24807.4<br/>
+|    |         |                        |    |    \--- com.intellij:242.24807.4 (*) [declaring module com.intellij.modules.lang]<br/>
+|    |         |                        |    \--- (optional) org.toml.lang:242.24807.4<br/>
+|    |         |                        |         +--- com.intellij:242.24807.4 (*) [declaring module com.intellij.modules.lang]<br/>
+|    |         |                        |         \--- (optional) tanvd.grazi:242.24807.4<br/>
+|    |         |                        |              +--- com.intellij:242.24807.4 (*) [declaring module intellij.platform.vcs.impl]<br/>
+|    |         |                        |              +--- (optional) com.intellij.java:242.24807.4 (*)<br/>
+|    |         |                        |              +--- (optional) com.intellij.properties:242.24807.4<br/>
+|    |         |                        |              |    +--- com.intellij:242.24807.4 (*) [declaring module com.intellij.modules.xml]<br/>
+|    |         |                        |              |    \--- (optional) com.intellij.copyright:242.24807.4 (*)<br/>
+|    |         |                        |              +--- (optional) org.intellij.plugins.markdown:242.24807.4 (*)<br/>
+|    |         |                        |              \--- (optional) org.jetbrains.plugins.yaml:242.24807.4 (*)<br/>
+|    |         |                        +--- (optional) org.jetbrains.plugins.terminal:242.24807.4 (*)<br/>
+|    |         |                        \--- (optional) PythonCore:242.24807.4 [declaring module com.intellij.modules.python]<br/>
+|    |         |                             +--- (failed) com.intellij.modules.python-in-mini-ide-capable (plugin+module, v2): Dependency 'com.intellij.modules.python-in-mini-ide-capable (plugin+module, v2)' is not resolved. It was searched in the following locations: com.jetbrains.pluginverifier.repository.repositories.dependency.DependencyPluginRepository@5e4459c1, Bundled plugins of IC-242.24807.4, com.jetbrains.pluginverifier.repository.repositories.dependency.DependencyPluginRepository@1cadd02f<br/>
+|    |         |                             +--- (failed) com.intellij.modules.python-pro-fleet-not-capable (plugin+module, v2): Dependency 'com.intellij.modules.python-pro-fleet-not-capable (plugin+module, v2)' is not resolved. It was searched in the following locations: com.jetbrains.pluginverifier.repository.repositories.dependency.DependencyPluginRepository@5e4459c1, Bundled plugins of IC-242.24807.4, com.jetbrains.pluginverifier.repository.repositories.dependency.DependencyPluginRepository@1cadd02f<br/>
+|    |         |                             +--- (failed) com.intellij.modules.rider (plugin+module, v2): Dependency 'com.intellij.modules.rider (plugin+module, v2)' is not resolved. It was searched in the following locations: com.jetbrains.pluginverifier.repository.repositories.dependency.DependencyPluginRepository@5e4459c1, Bundled plugins of IC-242.24807.4, com.jetbrains.pluginverifier.repository.repositories.dependency.DependencyPluginRepository@1cadd02f<br/>
+|    |         |                             +--- org.toml.lang:242.24807.4 (*)<br/>
+|    |         |                             +--- com.intellij:242.24807.4 (*) [declaring module com.intellij.modules.lang]<br/>
+|    |         |                             +--- (optional) com.intellij.copyright:242.24807.4 (*)<br/>
+|    |         |                             +--- (optional) com.intellij.java:242.24807.4 (*)<br/>
+|    |         |                             +--- (optional) org.intellij.intelliLang:242.24807.4 (*)<br/>
+|    |         |                             +--- (optional) org.intellij.plugins.markdown:242.24807.4 (*)<br/>
+|    |         |                             +--- (optional) org.jetbrains.plugins.terminal:242.24807.4 (*)<br/>
+|    |         |                             +--- (optional) tanvd.grazi:242.24807.4 (*)<br/>
+|    |         |                             \--- (optional) training:242.24807.4 (*)<br/>
+|    |         \--- (optional) kotlin.features-trainer:&lt;empty version&gt; [declaring module kotlin.features-trainer]<br/>
+|    |              +--- training:242.24807.4 (*)<br/>
+|    |              \--- intellij.java.featuresTrainer:&lt;empty version&gt; (*) [declaring module intellij.java.featuresTrainer]<br/>
+|    +--- (optional) com.intellij.copyright:242.24807.4 (*)<br/>
+|    +--- (optional) com.intellij.platform.images:242.24807.4 (*)<br/>
+|    +--- (optional) training:242.24807.4 (*)<br/>
+|    +--- (optional) com.intellij:242.24807.4 (*) [declaring module com.intellij.modules.idea.community]<br/>
+|    \--- (optional) com.jetbrains.performancePlugin:242.24807.4 (*) [declaring module intellij.performanceTesting.vcs]<br/>
+\--- com.intellij:242.24807.4 (*) [declaring module com.intellij.modules.platform]<br/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script >
+//$( "#tabs" ).tabs();
+$(".plugin").accordion({active: false, collapsible: true, heightStyle: 'content'});
+$(".update").accordion({active: false, collapsible: true, heightStyle: 'content'});
+
+$(".detailsLink").click(function () {
+    var longDiv = $(this).parent().find(".longDescription");
+
+    if (longDiv.css('display') !== 'block') {
+        longDiv.css('display', 'block')
+    } else {
+        longDiv.css('display', 'none')
+    }
+
+    return false
+});
+
+$(".updateHasProblems .uMarker").attr('title', "Problems found");
+$(".excluded .uMarker").attr('title', "Excluded");
+
+$(".pluginHasProblem .pMarker").attr('title', "Problems found");
+$(".pluginOk .pMarker").attr('title', "Excluded");
+</script>
+</body>
+</html>

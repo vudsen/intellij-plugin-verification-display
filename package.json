@@ -1,6 +1,6 @@
 {
   "name": "intellij-plugin-verification-display",
-  "version": "1.0.1",
+  "version": "1.1.1",
   "description": "",
   "type": "module",
   "main": "index.js",
@@ -8,20 +8,24 @@
     "exec": "cross-env NODE_ENV=local node dist/bundle.js",
     "build:dev": "cross-env NODE_ENV=development rollup -c",
     "build": "cross-env NODE_ENV=production rollup -c",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@jest/globals": "^29.7.0",
     "@rollup/plugin-commonjs": "^28.0.3",
     "@rollup/plugin-node-resolve": "^16.0.0",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^12.1.2",
     "@types/node": "^20",
     "cross-env": "^7.0.3",
+    "jest": "^29.7.0",
     "rollup": "^4.35.0",
     "rollup-plugin-replace": "^2.2.0",
+    "ts-jest": "^29.2.6",
+    "ts-node": "^10.9.2",
     "tslib": "^2.8.1"
   },
   "dependencies": {

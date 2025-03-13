@@ -1,0 +1,16 @@
+io.github.vudsen.arthas-ui:0.0.2-alpha
++--- com.intellij.java:232.10335.12
+|    +--- com.intellij:232.10335.12 [declaring module com.intellij.modules.platform]
+|    +--- (optional) com.intellij.copyright:232.10335.12
+|    |    \--- com.intellij:232.10335.12 (*) [declaring module com.intellij.modules.lang]
+|    +--- (optional) com.intellij.platform.images:232.10335.12
+|    |    \--- com.intellij:232.10335.12 (*) [declaring module com.intellij.modules.lang]
+|    +--- (optional) com.jetbrains.performancePlugin:232.10335.12
+|    |    \--- com.intellij:232.10335.12 (*) [declaring module com.intellij.modules.lang]
+|    \--- (optional) training:232.10335.12
+|         +--- com.intellij:232.10335.12 (*) [declaring module com.intellij.modules.lang]
+|         \--- (optional) Git4Idea:232.10335.12
+|              +--- (failed) intellij.platform.ide.newUiOnboarding (module, v2): Dependency 'intellij.platform.ide.newUiOnboarding (module, v2)' is not resolved. It was searched in the following locations: com.jetbrains.pluginverifier.repository.repositories.dependency.DependencyPluginRepository@51479179, Bundled plugins of IC-232.10335.12, com.jetbrains.pluginverifier.repository.repositories.dependency.DependencyPluginRepository@7ccc720
+|              +--- com.intellij:232.10335.12 (*) [declaring module com.intellij.modules.vcs]
+|              \--- (optional) com.jetbrains.performancePlugin:232.10335.12 (*)
+\--- com.intellij:232.10335.12 (*) [declaring module com.intellij.modules.platform]

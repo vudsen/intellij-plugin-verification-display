@@ -2,7 +2,7 @@
 
 Display your plugin verification result by replying a comment.
 
-Usage:
+Basic usage:
 
 ```yaml
 steps:

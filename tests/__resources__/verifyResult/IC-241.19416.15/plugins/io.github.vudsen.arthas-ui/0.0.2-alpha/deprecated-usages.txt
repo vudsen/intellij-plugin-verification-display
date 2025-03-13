@@ -1,0 +1,2 @@
+Deprecated method com.intellij.ui.util.UiSizeUtilKt.setMinimumWidth(javax.swing.JComponent $this$minimumWidth, int newValue) : void is invoked in io.github.vudsen.arthasui.core.ui.HostMachineToolWindowV2.<init>(Project)
+Deprecated method com.intellij.ui.util.UiSizeUtilKt.setPreferredHeight(javax.swing.JComponent $this$preferredHeight, int newValue) : void is invoked in io.github.vudsen.arthasui.util.ui.TabbedPaneHeader.<init>(ActionGroup, TabHeaderListener)

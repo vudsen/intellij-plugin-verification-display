@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test basic usage 1`] = `
+"# 📖 Verification Result
+
+| Version | Summary | Links |
+| ------- | ------- | ------ |
+| IC-232.10335.12 | ❌ 4 compatibility problems. 6 usages of experimental API | [Detail](https://foo.bar/IC-232.10335.12/report) |
+| IC-233.15619.7 | ❌ 1 compatibility problem. 10 usages of experimental API | [Detail](https://foo.bar/IC-233.15619.7/report) |
+| IC-241.19416.15 | ✅ Compatible. 2 usages of deprecated API. 10 usages of experimental API | [Detail](https://foo.bar/IC-241.19416.15/report) |
+| IC-242.24807.4 | ✅ Compatible. 2 usages of deprecated API. 10 usages of experimental API | [Detail](https://foo.bar/IC-242.24807.4/report) |
+| IC-243.25659.39 | ✅ Compatible. 2 usages of deprecated API. 4 usages of experimental API | [Detail](https://foo.bar/IC-243.25659.39/report) |
+"
+`;

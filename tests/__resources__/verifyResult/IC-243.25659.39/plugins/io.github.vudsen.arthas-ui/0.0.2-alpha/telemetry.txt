@@ -1,0 +1,9 @@
+Plugin ID: io.github.vudsen.arthas-ui
+Plugin Version: 0.0.2-alpha
+Descriptor parsed in: 73 ms
+Descriptor parsed (raw ms): 73
+Plugin size (bytes): 2770384
+Verified classes in plugin artifact: 392
+Verification time: 11 s 721 ms
+Verification time (raw ms): 11721
+
