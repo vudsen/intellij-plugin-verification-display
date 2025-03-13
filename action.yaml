@@ -10,7 +10,9 @@ inputs:
   token:
     description: 'The github token'
     required: true
-
+  visit-path:
+    description: 'If you have uploaded your verify result to a backend server, 
+    provided the base path here. We will link the path in our comment.'
 runs:
   using: 'node20'
   main: 'dist/bundle.js'

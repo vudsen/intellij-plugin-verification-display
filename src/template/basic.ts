@@ -1,3 +1,5 @@
+import {parseVerifyResult} from "../util";
+
 export type VerifyResult = {
   version: string
   compatibilityProblems?: string
@@ -48,7 +50,14 @@ function splitLines(text: string[]): string[] {
   return builder
 }
 
-export default function parseAsMarkdown(result: VerifyResult[]): string {
+
+
+/**
+ * 将验证结果解析为 markdown
+ * @param unzippedRoot 验证输出的文件
+ */
+export default function parseAsMarkdown(unzippedRoot: string): string {
+  const result = parseVerifyResult(unzippedRoot)
   const builder: string[] = ['# Plugin Verifier Check Result']
 
   for (let verifyResult of result) {

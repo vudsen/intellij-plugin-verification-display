@@ -7,6 +7,7 @@ type Inputs = {
   displayExperimentalApiUsages: boolean
   displayTelemetry: boolean
   displayDeprecatedUsages: boolean
+  visitPath?: string
   token: string
 }
 
@@ -18,6 +19,7 @@ export default function getInputs(): Inputs {
       displayExperimentalApiUsages: process.env.displayExperimentalApiUsages === 'true',
       displayTelemetry: process.env.displayTelemetry === 'true',
       displayDeprecatedUsages: process.env.displayDeprecatedUsages === 'true',
+      visitPath: undefined,
       token: ''
     }
   } else {
@@ -28,6 +30,7 @@ export default function getInputs(): Inputs {
       displayTelemetry: false,
       displayDeprecatedUsages: false,
       token: core.getInput('token'),
+      visitPath: core.getInput('visit-path'),
     }
   }
 }
